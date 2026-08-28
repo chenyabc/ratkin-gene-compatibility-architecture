@@ -1,0 +1,21 @@
+# OS / editor files
+.DS_Store
+._*
+Thumbs.db
+
+# Build and game artifacts
+*.dll
+*.pdb
+*.mdb
+*.png
+*.dds
+*.zstd
+Textures/
+Assemblies/
+About/Preview*
+About/PublishedFileId.txt
+
+# Local working material
+reference-mods/
+private/
+archive/

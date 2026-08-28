@@ -1,0 +1,23 @@
+<!--
+  仅用于解释 Conditional Add/Replace 结构。
+  ExampleRace、ExampleEar 和所有路径均为虚构标识，不能直接用于游戏。
+-->
+<Patch>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/ExampleRaceSettings[defName="ExampleRace"]/bodyAddons/li[id="ExampleEar"]/colorChannel</xpath>
+
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/ExampleRaceSettings[defName="ExampleRace"]/bodyAddons/li[id="ExampleEar"]</xpath>
+      <value>
+        <colorChannel>PlaceholderColor</colorChannel>
+      </value>
+    </nomatch>
+
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/ExampleRaceSettings[defName="ExampleRace"]/bodyAddons/li[id="ExampleEar"]/colorChannel</xpath>
+      <value>
+        <colorChannel>PlaceholderColor</colorChannel>
+      </value>
+    </match>
+  </Operation>
+</Patch>

@@ -1,0 +1,7 @@
+#!/bin/sh
+# Run the clean-room boundary gate before pushing. This is a convenience
+# guard against accidental pushes, not a security boundary: it can be
+# bypassed with --no-verify or by pushing through the web UI / API.
+set -e
+repo_root=$(git rev-parse --show-toplevel)
+python3 "$repo_root/scripts/check-boundary.py"
